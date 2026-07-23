@@ -28,7 +28,7 @@ export default class CommunityPublish extends SfCommand<CommunityPublishResult> 
     const username = flags['target-org']?.getUsername();
     if (name) {
       name.forEach((elem) => {
-        this.log(exec(`sf community publish --name ${elem} --target-org ${username}`).toString());
+        this.log(exec(`sf community publish --name "${elem}" --target-org ${username}`).toString());
       });
     } else {
       const allcommunities = JSON.parse(
@@ -38,7 +38,7 @@ export default class CommunityPublish extends SfCommand<CommunityPublishResult> 
       );
       if (allcommunities !== null) {
         allcommunities.result?.records?.forEach((elem: { Name: string }) => {
-          this.log(exec(`sf community publish --name ${elem.Name} --target-org ${username}`).toString());
+          this.log(exec(`sf community publish --name "${elem.Name}" --target-org ${username}`).toString());
         });
       }
     }
