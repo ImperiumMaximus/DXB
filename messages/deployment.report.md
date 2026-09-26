@@ -55,6 +55,9 @@ Include detailed code coverage information in the report.
 # flags.title.summary
 Custom title for the report.
 
+# flags.min-severity.summary
+Minimum severity of the violations to be put in the report.
+
 # error.noInput
 You must provide either --job-id or --json-file to generate a report.
 
