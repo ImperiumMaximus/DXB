@@ -1,0 +1,14 @@
+{
+    "type": "view",
+    "themeLayoutType": "Inner",
+    "regions": [
+        {
+            "type": "region",
+            "components": [
+                {
+                    "componentName": "c:fln_b2b_productSpecifications"
+                }
+            ]
+        }
+    ]
+}

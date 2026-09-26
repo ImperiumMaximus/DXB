@@ -225,6 +225,7 @@
     "test": "wireit",
     "test:nuts": "nyc mocha \"**/*.nut.ts\" --slow 4500 --timeout 600000 --parallel",
     "test:only": "wireit",
+    "test:unit": "wireit",
     "version": "oclif readme"
   },
   "publishConfig": {
@@ -284,6 +285,7 @@
       "dependencies": [
         "test:compile",
         "test:only",
+        "test:unit",
         "lint"
       ]
     },
@@ -299,6 +301,21 @@
         ".mocha*",
         "!*.nut.ts",
         ".nycrc"
+      ],
+      "output": []
+    },
+    "test:unit": {
+      "command": "mocha \"test/community-publish/**/*.test.ts\"",
+      "env": {
+        "FORCE_COLOR": "2"
+      },
+      "files": [
+        "test/community-publish/**/*.ts",
+        "test/community-publish/**/*.xml",
+        "test/community-publish/**/*.json",
+        "src/commands/dxb/community/publish.ts",
+        "**/tsconfig.json",
+        ".mocha*"
       ],
       "output": []
     },
