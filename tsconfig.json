@@ -5,7 +5,8 @@
     "rootDir": "src",
     "declaration": false,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "useDefineForClassFields": false
   },
   "include": ["./src/**/*.ts", "/src/utils/*"]
 }
